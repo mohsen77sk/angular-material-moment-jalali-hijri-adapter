@@ -206,7 +206,7 @@ export class DynamicMomentDateAdapter extends DateAdapter<moment.Moment> {
       case 'Jalaali':
         return momentJalaali(date).clone().locale('fa-IR');
       case 'Hijri':
-        return momentHijri(date).clone().locale('ar-SU');
+        return momentHijri(date).clone().locale('ar-SA');
     }
   }
 
@@ -256,7 +256,7 @@ export class DynamicMomentDateAdapter extends DateAdapter<moment.Moment> {
         case 'Jalaali':
           return momentJalaali(value, parseFormat).locale('fa-IR');
         case 'Hijri':
-          return momentHijri(value, parseFormat).locale('ar-SU');
+          return momentHijri(value, parseFormat).locale('ar-SA');
       }
     }
     return value ? this._createMoment(value).locale(this.locale) : null;
@@ -448,6 +448,6 @@ export class DynamicMomentDateAdapter extends DateAdapter<moment.Moment> {
       .minutes(0)
       .seconds(0)
       .milliseconds(0)
-      .locale('ar-SU');
+      .locale('ar-SA');
   }
 }
