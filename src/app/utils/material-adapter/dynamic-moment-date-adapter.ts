@@ -279,6 +279,12 @@ export class DynamicMomentDateAdapter extends DateAdapter<moment.Moment> {
         }
         return date.format(displayFormat);
       case 'Hijri':
+        if (displayFormat === 'l') {
+          displayFormat = 'iYYYY/iM/iD';
+        }
+        if (displayFormat === 'L') {
+          displayFormat = 'iYYYY/iMM/iDD';
+        }
         if (displayFormat === 'my') {
           displayFormat = 'iMMM iYYYY';
         }
