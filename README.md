@@ -8,6 +8,10 @@ This library provides a custom DateAdapter for the Angular Material Datepicker c
 * Supported **Jalali** calendar for `fa-IR` locale.
 * Supported **Hijri** calendar for `ar-US` locale.
 
+## Demo
+
+<https://mohsen77sk.github.io/angular-material-moment-jalali-hijri-adapter/>
+
 ## Install
 
 ```sh
