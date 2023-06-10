@@ -1,5 +1,7 @@
 import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
+import * as moment from 'moment';
+import { Moment, isMoment } from 'moment';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,7 @@ import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  date = new Date();
+  date: Date | Moment = new Date();
 
   /**
    * constructor
@@ -50,7 +52,16 @@ export class AppComponent {
    *
    * @param value
    */
-  changeDate(value: Date) {
+  changeDate(value: Date | Moment) {
+    // Fix change date in sample
+    if (value == this.date) {
+      if (isMoment(value)) {
+        value = moment(value).second(value.second() + 1);
+      } else {
+        value = new Date(value.setSeconds(value.getSeconds() + 1));
+      }
+    }
+
     console.log(
       `Change:
       Date: ${value}
