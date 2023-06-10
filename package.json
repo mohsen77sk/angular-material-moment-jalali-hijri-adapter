@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-demo": "npm run build-lib && ng build --base-href /angular-material-moment-jalali-hijri-adapter/"
   },
   "private": true,
   "dependencies": {
