@@ -32,7 +32,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "moment",
+              "moment-hijri",
+              "moment-jalaali"
+            ]
           },
           "configurations": {
             "production": {
