@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build-demo": "npm run ng build --base-href /angular-material-moment-jalali-hijri-adapter/"
+    "build-demo": "ng build --base-href /angular-material-moment-jalali-hijri-adapter/"
   },
   "private": true,
   "dependencies": {
